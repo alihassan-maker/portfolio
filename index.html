@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALI HASSAN | 3D Portfolio</title>
+    <meta name="description" content="3D Portfolio of Ali Hassan, a next-level web developer.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Three.js for 3D Background Objects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Canvas Container -->
+    <div id="bg-canvas-container"></div>
+    
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">ALI<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="btn-primary-small">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content fade-up">
+                <div class="hero-badge">3D Experience</div>
+                <h1 class="hero-title">Crafting <span class="gradient-text">Immersive</span><br>Dimensions.</h1>
+                <p class="hero-subtitle">I'm Ali Hassan, a Full Stack Developer & AI Automation Specialist building intelligent, next-generation web applications.</p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up" style="transition-delay: 0.2s;">
+                <!-- 3D Interactive Card using Vanilla Tilt -->
+                <div class="glass-card hero-card 3d-card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare data-tilt-max-glare="0.3" style="padding: 1rem;">
+                    <div class="card-inner-3d profile-card" style="position: relative; width: 100%; height: 100%; border-radius: 16px; overflow: hidden;">
+                        <img src="profile.png" alt="Ali Hassan" class="hero-profile-img" style="width: 100%; height: auto; border-radius: 12px; display: block; object-fit: cover;">
+                        <div class="floating-badge" style="top: auto; bottom: -15px; right: -15px; background: var(--accent-2);">Ali Hassan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="section-header reveal">
+                <h2 class="section-title">Who is <span class="gradient-text">Ali Hassan</span>?</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>I am Ali Hassan, a highly driven <strong>Full Stack Developer</strong> and <strong>AI Automation Specialist</strong> with over 2 years of hands-on experience in architecting and deploying comprehensive digital solutions. My mission is to build intelligent, scalable applications that not only look incredible but solve complex real-world problems.</p>
+                    
+                    <p>On the front lines of development, I specialize in crafting fluid, responsive <strong>Web and Mobile Applications</strong>. Leveraging modern frameworks like <strong>React.js</strong> and <strong>React Native</strong>, I focus on delivering seamless user experiences (UX) and pixel-perfect interfaces that keep users engaged across all devices.</p>
+                    
+                    <p>Under the hood, I build the engines that power these applications. I have deep expertise in developing robust, high-performance backend architectures using <strong>Node.js</strong>, designing secure and efficient <strong>RESTful APIs</strong>, and managing complex data structures within <strong>MongoDB</strong>. This end-to-end knowledge allows me to oversee a project from its initial database schema all the way to the final frontend polish.</p>
+                    
+                    <p>Beyond traditional full-stack development, my true passion—and where I deliver the most unique value—lies in the realm of <strong>AI Automation</strong>. Utilizing <strong>Python</strong>, I design and implement automated workflows, custom AI agents, and smart integrations that drastically reduce manual labor. Whether it's optimizing data processing, automating customer interactions, or streamlining internal business operations, I harness the power of artificial intelligence to make businesses run faster and smarter.</p>
+                    
+                    <p>With over 50 successfully completed projects, I bring a proven track record of turning complex technical requirements into elegant, automated realities. I am constantly learning, adapting, and pushing the boundaries of what is possible in modern tech.</p>
+                </div>
+                <div class="about-stats reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-card glass-card 3d-card" data-tilt data-tilt-scale="1.05">
+                        <h3 class="stat-number">2+</h3>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                    <div class="stat-card glass-card 3d-card" data-tilt data-tilt-scale="1.05">
+                        <h3 class="stat-number">50+</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work">
+            <div class="section-header reveal">
+                <h2 class="section-title">Selected <span class="gradient-text">Work</span></h2>
+            </div>
+            <div class="bento-grid perspective-container">
+                <!-- Project 1 -->
+                <div class="bento-item glass-card reveal 3d-card" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="project-info card-inner-3d">
+                        <span class="project-category">Web App</span>
+                        <h3 class="project-title">Project Alpha</h3>
+                        <p class="project-desc">A revolutionary 3D dashboard visualization.</p>
+                        <a href="#" class="project-link">Explore &rarr;</a>
+                    </div>
+                    <div class="project-image-placeholder alpha-bg"></div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bento-item glass-card reveal 3d-card" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="project-info card-inner-3d">
+                        <span class="project-category">E-Commerce</span>
+                        <h3 class="project-title">Nexus Store</h3>
+                        <p class="project-desc">Interactive 3D product configurator.</p>
+                        <a href="#" class="project-link">Explore &rarr;</a>
+                    </div>
+                    <div class="project-image-placeholder nexus-bg"></div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bento-item glass-card reveal col-span-2 3d-card" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="project-info card-inner-3d">
+                        <span class="project-category">Branding & Web</span>
+                        <h3 class="project-title">Lumina Platform</h3>
+                        <p class="project-desc">Spatial UI and cutting-edge WebGL integration for an AI startup.</p>
+                        <a href="#" class="project-link">Explore &rarr;</a>
+                    </div>
+                    <div class="project-image-placeholder lumina-bg"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="section-header reveal">
+                <h2 class="section-title">Tech <span class="gradient-text">Arsenal</span></h2>
+            </div>
+            <div class="skills-container reveal perspective-container">
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">Full Stack Web</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">Mobile Apps</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">AI Automation</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">Python</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">React.js</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">Node.js</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">MongoDB</div>
+                <div class="skill-tag" data-tilt data-tilt-scale="1.1" data-tilt-max="20">REST APIs</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container glass-card reveal 3d-card" data-tilt data-tilt-max="3" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="contact-info card-inner-3d">
+                    <h2 class="section-title">Let's build something <span class="gradient-text">amazing</span>.</h2>
+                    <p>Have a project in mind? Whether you need a robust Full Stack application, a custom AI automation workflow, or just want to chat about tech—I'm always open to discussing new opportunities.</p>
+                </div>
+                <form class="contact-form card-inner-3d" style="transform: translateZ(30px);" id="contactForm">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="28469085-a6ee-40f9-9c30-69c3ec622f64">
+                    <!-- Email Subject -->
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">ALI<span class="dot">.</span></div>
+            <p class="footer-copy">&copy; 2026 Ali Hassan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla Tilt for 3D Cards -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
