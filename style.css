@@ -281,10 +281,10 @@ section {
 
 /* Hero Section */
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     padding-top: 12rem;
 }
 
@@ -313,6 +313,7 @@ section {
 
 .hero-cta {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
     transform-style: preserve-3d;
 }
@@ -391,89 +392,36 @@ section {
     transform: translateZ(20px);
 }
 
-/* Work Section (Bento Grid) */
-.bento-grid {
+/* Services Section */
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 400px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.bento-item {
-    position: relative;
-    overflow: hidden;
+.service-card {
     display: flex;
     flex-direction: column;
-    padding: 0;
-}
-
-.bento-item.col-span-2 {
-    grid-column: span 2;
-}
-
-.project-info {
-    padding: 2.5rem;
-    position: relative;
-    z-index: 2;
-    background: linear-gradient(to bottom, rgba(5,5,5,0.8), transparent);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-category {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent-3);
-    margin-bottom: 1rem;
-}
-
-.project-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.project-desc {
-    font-size: 1rem;
-    max-width: 80%;
-    margin-bottom: auto;
-}
-
-.project-link {
-    font-weight: 600;
-    display: inline-flex;
+    padding: 3rem 2rem;
+    text-align: center;
     align-items: center;
-    gap: 8px;
+}
+
+.service-icon {
+    margin-bottom: 1.5rem;
     transform: translateZ(40px);
 }
 
-.project-link:hover {
-    color: var(--accent-1);
-    gap: 12px;
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transform: translateZ(30px);
 }
 
-.project-image-placeholder {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    z-index: 1;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.4;
-    transition: transform 0.5s ease;
-    transform: translateZ(-20px); /* Push image back */
+.service-desc {
+    font-size: 1rem;
+    transform: translateZ(20px);
 }
-
-.bento-item:hover .project-image-placeholder {
-    opacity: 0.7;
-}
-
-.alpha-bg { background: linear-gradient(45deg, #1a1a1a, #2a2a2a); }
-.nexus-bg { background: linear-gradient(45deg, #2a2a2a, #1a1a1a); }
-.lumina-bg { background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), #1a1a1a); }
 
 /* Skills Section */
 .skills-container {
@@ -615,21 +563,10 @@ section {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
-    }
-    
     .hero-title { font-size: 4rem; }
     .hero-subtitle { margin: 0 auto 3rem; }
-    .hero-cta { justify-content: center; }
-    
-    .bento-grid {
-        grid-template-columns: 1fr;
-    }
-    .bento-item.col-span-2 {
-        grid-column: span 1;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .contact-container {
@@ -647,6 +584,10 @@ section {
     }
     
     .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
         grid-template-columns: 1fr;
     }
     
